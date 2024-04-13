@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সুরক্ষা : কোভিড-১৯ ভ্যাকসিনের জন্য নিবন্ধন করুন</title>
+  <!-- Link to Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    .navbar{
+    overflow: hidden;
+    background: #fff;
+    margin-top: -10px;
+}
+
+
+header .container label img {
+    width: 220px; /* Adjust the width according to your image size */
+    height: 80px; /* This ensures the aspect ratio is maintained */
+    margin-bottom: 2px; /* Add some spacing between the image and the text */
+    padding: 15px 10% 5px;
+}
+nav{
+    
+    width: 100%;
+    background: #ffffff;
+    position: top;
+    left:0;
+    right:0;
+    top:0;
+}
+nav .logo{
+    width: 20px;
+    cursor: pointer;
+}
+
+nav ul{
+    float: right;
+    margin-right: 40px;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    margin: 5px 0px;
+    line-height: 70px;
+}
+nav ul li a{
+    color: #000000;
+    font-size: 18px;
+    border: 1px solid transparent;
+    padding: 8px 22px;
+    border-radius: 3px;
+    transition: ease .40s;
+    
+}
+nav ul li a.active ,a:hover{
+border: 1px solid rgb(12, 19, 114);
+background-color: rgb(199, 230, 219);
+transition: .4s;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <!-- Navigation bar -->
+      <nav class="navbar">
+        <label>
+        <img src="image/logo.png" class="logo">
+      </label>
+        <ul>
+        <li><a class="active" href="index.php">Home</a></li>
+        <li><a href="#">Registration</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="#">Certificate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+  <div class="container">
+    <h1 class="mt-5">Registration Form</h1>
+    <form>
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name:</label>
+        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+      </div>
+      <div class="container mt-3">
+        <label class="form-label">Choose your ID:</label>
+        <div class="row">
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioOptions" id="NID" value="NID">
+              <label class="form-check-label" for="NID">
+                NID
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioOptions" id="Passport" value="Passport">
+              <label class="form-check-label" for="Passport">
+                Passport
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="id" class="form-label">National Identity Card Number:</label>
+        <input type="id" class="form-control" id="id" placeholder="Example- 19825624603112948" required>
+      </div>
+      <div class="mb-3">
+        <label for="number" class="form-label">Phone Number:</label>
+        <input type="text" class="form-control" id="number" placeholder="Enter your Number" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password:</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+      </div>
+
+      
+
+      <div class="mb-3">
+        <label class="form-label" for="selecttype">Select type:</label>
+        <select class="form-select" id="selecttype" required>
+          <option value="" disabled selected>Select type:</option>
+          <option value="cat1">Citizen Registration (18 years & above)</option>
+          <option value="cat2">Foreign nationals</option>
+          <option value="cat3">All officers and employees of the government health and family planning department </option>
+          <option value="cat4">Approved private health and family planning officers-employees</option>
+          <option value="cat5">Bangladeshi Students</option>
+          <option value="cat6">Bangladeshi workers</option>
+          <option value="cat7">Military and paramilitary defense forces</option>
+          <option value="cat8">Civilian Aircraft</option>
+          <option value="cat9">Essential Offices for governance the state</option>
+          <option value="cat10">Bar Council Register Attorney</option>
+          <option value="cat11">Educational Institutions</option>
+          <option value="cat12">Front-line media workers</option>
+          <option value="cat13">Elected Public representative</option>
+          <option value="cat14">Front-line officers and employees of City Corporation and the municipality</option>
+          <option value="cat15">Religious Representative (of all religions)</option>
+          <option value="cat16">Engaged in burial</option>
+          <option value="cat17">Government officials and employees at the forefront of emergency </option>
+          <option value="cat18">Electricity,water,gas,sewerage and fire services</option>
+          <option value="cat19">Government officials and employees of railway stations,airports,land ports and seaports</option>
+          <option value="cat20">Government officials and employees Involved in emergency public service in districts and upazilas</option>
+          <option value="cat21">Bank officer-employee</option>
+          <option value="cat22">Farmer</option>
+          <option value="cat23">Workers </option>
+          <option value="cat24">National players</option>
+          <option value="cat25">Students in medical education related subjects</option>
+          <option value="cat26">Student 18 years and above </option>
+          <option value="cat27">Person with disability</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="selecttype">Division :</label>
+        <select class="form-select" id="selecttype" required>
+          <option value="" disabled selected>Select division:</option>
+          <option value="Chittagong">Chittagong</option>
+          <option value="Dhaka">Dhaka</option>
+          <option value="Sylhet">Sylhet</option>
+          <option value="Mymensingh">Mymensingh</option>
+          <option value="Khulna">Khulna</option>
+          <option value="Rajshahi">Rajshahi</option>
+          <option value="Rangpur">Rangpur</option>
+          <option value="Barishal">Barishal</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selecttype">Center :</label>
+        <select class="form-select" id="selecttype" required>
+          <option value="" disabled selected>Select center:</option>
+          <option value="med1">Shahid Suhrawardy Medical College Hospital</option>
+          <option value="med2">Dhaka Medical College Hospital</option>
+          <option value="med3">Chittagong Medical College Hospital</option>
+          <option value="med4">Rajshahi Medical College Hospital</option>
+          <option value="med5">MAG osmani Medical College, Sylhet, Bangladesh</option>
+          <option value="med6">Sher-e-Bangla Medical College Hospital (SBMC)</option>
+          <option value="med7">Mymensingh Medical College Hospital</option>
+          <option value="med8">Rangpur Medical College Hospital</option>
+          <option value="med9">Shahid Ziaur Rahman Medical College Hospital</option>
+          <option value="med10">Comilla Medical College Hospital</option>
+          <option value="med11">Khulna Medical College Hospital</option>
+          <option value="med12">Faridpur Medical College Hospital</option>
+          <option value="med13">Dinajpur Medical College Hospital</option>
+          <option value="med14">Noakhali Medical College</option>
+          <option value="med15">Barguna District Hospital</option>
+          <option value="med16">Jhalokathi District Hospital</option>
+          <option value="med17">Bhola District Hospital</option>
+          <option value="med18">Pirojpur District Hospital</option>
+          <option value="med19">Patuakhali 250 bed Sadar Hospital</option>
+          <option value="med20">Cox's Bazar 250 Bed District Sadar Hospital</option>
+          <option value="med21">Gopalganj 250 bed General Hospital</option>
+          <option value="med22">Kishoreganj 250 Bed District Sadar Hospital </option>
+          <option value="med23"> Narsingdi District Hospital</option>
+          <option value="med24">Jessore 250 bed General Hospital</option>
+          <option value="med25">Jhenaidah District Hospital</option>
+          <option value="med26">Nilphamari District Hospital</option>
+          <option value="med27">Habiganj District Hospita</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="dateOfBirth" class="form-label">Date of birth (according to national identity card):</label>
+        <input type="date" class="form-control" id="dateOfBirth" required>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+        <label class="form-check-label" for="agreeTerms">I agree to the terms and conditions</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+
+  
+</body>
+</html>

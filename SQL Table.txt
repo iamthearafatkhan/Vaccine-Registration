@@ -1,0 +1,158 @@
+CREATE TABLE superadmin (
+    id INT AUTO_INCREMENT UNIQUE,
+    full_name VARCHAR(255),
+    nid VARCHAR(20) PRIMARY KEY,
+    password_hash VARCHAR(255),
+    email VARCHAR(255),
+    phone VARCHAR(20),
+    role VARCHAR(20)
+);
+
+
+
+
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT UNIQUE,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    nid VARCHAR(17) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    admin_center INT,
+    admin_division INT,
+    role VARCHAR(20) DEFAULT 'admin',
+    FOREIGN KEY (admin_center) REFERENCES center_table(id),
+    FOREIGN KEY (admin_division) REFERENCES division_table(id)
+);
+
+
+
+
+CREATE TABLE applicant (
+    id INT UNIQUE AUTO_INCREMENT,
+    full_name VARCHAR(255) NOT NULL,
+    nid VARCHAR(255) PRIMARY KEY NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    date_of_birth DATE NOT NULL,
+    category INT,
+    division INT,
+    center INT,
+    
+    vaccine_name VARCHAR(255),
+    vaccine_date DATE,
+    card VARCHAR(255),
+    certificate VARCHAR(255),
+role VARCHAR(20) DEFAULT 'user',
+    FOREIGN KEY (category) REFERENCES category_table(id),
+    FOREIGN KEY (division) REFERENCES division_table(id),
+    FOREIGN KEY (center) REFERENCES center_table(id)
+);
+
+
+
+
+
+CREATE TABLE category_table (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    category_name VARCHAR(255) NOT NULL
+);
+
+INSERT INTO category_table (category_name)
+VALUES
+('Citizen Registration (18 years & above)'),
+('Foreign nationals'),
+('All officers and employees of the government health and family planning department'),
+('Approved private health and family planning officers-employees'),
+('Bangladeshi Students'),
+('Bangladeshi workers'),
+('Military and paramilitary defense forces'),
+('Civilian Aircraft'),
+('Essential Offices for governance the state'),
+('Bar Council Register Attorney'),
+('Educational Institutions'),
+('Front-line media workers'),
+('Elected Public representative'),
+('Front-line officers and employees of City Corporation and the municipality'),
+('Religious Representative (of all religions)'),
+('Engaged in burial'),
+('Government officials and employees at the forefront of emergency'),
+('Electricity, water, gas, sewerage and fire services'),
+('Government officials and employees of railway stations, airports, land ports and seaports'),
+('Government officials and employees Involved in emergency public service in districts and upazilas'),
+('Bank officer-employee'),
+('Farmer'),
+('Workers'),
+('National players'),
+('Students in medical education related subjects'),
+('Student 18 years and above'),
+('Person with disability');
+
+
+
+
+
+CREATE TABLE center_table (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    center_name VARCHAR(255) NOT NULL
+);
+
+INSERT INTO center_table (center_name)
+VALUES
+('Shahid Suhrawardy Medical College Hospital'),
+('Dhaka Medical College Hospital'),
+('Chittagong Medical College Hospital'),
+('Rajshahi Medical College Hospital'),
+('M.A.G Osmani Medical College, Sylhet, Bangladesh'),
+('Sher-e-Bangla Medical College Hospital (SBMC)'),
+('Mymensingh Medical College Hospital'),
+('Rangpur Medical College Hospital'),
+('Shahid Ziaur Rahman Medical College Hospital'),
+('Comilla Medical College Hospital'),
+('Khulna Medical College Hospital'),
+('Faridpur Medical College Hospital'),
+('Dinajpur Medical College Hospital'),
+('Noakhali Medical College'),
+('Barguna District Hospital'),
+('Jhalokathi District Hospital'),
+('Bhola District Hospital'),
+('Pirojpur District Hospital'),
+('Patuakhali 250 bed Sadar Hospital'),
+('Cox\'s Bazar 250 Bed District Sadar Hospital'),
+('Gopalganj 250 bed General Hospital'),
+('Kishoreganj 250 Bed District Sadar Hospital'),
+('Narsingdi District Hospital'),
+('Jessore 250 bed General Hospital'),
+('Jhenaidah District Hospital'),
+('Nilphamari District Hospital'),
+('Habiganj District Hospital');
+
+
+
+
+
+
+
+CREATE TABLE division_table (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    division_name VARCHAR(255) NOT NULL
+);
+
+
+
+
+
+INSERT INTO division_table (division_name)
+VALUES
+('Chittagong'),
+('Dhaka'),
+('Sylhet'),
+('Mymensingh'),
+('Khulna'),
+('Rajshahi'),
+('Rangpur'),
+('Barishal');
+
+
+
