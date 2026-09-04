@@ -39,10 +39,12 @@ To run this project locally, ensure you have the following installed:
 
 ---
 
-👤 Author
-Arafat Khan - @iamthearafatkhan
+## 👤 Author
+
+* **Arafat Khan** - [@iamthearafatkhan](https://github.com/iamthearafatkhan)
 
 ---
 
-📄 License
-This project is open-source and anybody can use it.
+## 📄 License
+
+This project is open-source and free for anyone to use, modify, or distribute.
